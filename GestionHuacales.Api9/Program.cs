@@ -1,7 +1,7 @@
 
 using GestionHuacales.Api9.DATA;
 using GestionHuacales.Api9.Models;
-//using GestionHuacales.Api9.Services;
+using GestionHuacales.Api9.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace GestionHuacales.Api9;
@@ -25,8 +25,8 @@ public class Program
         });
 
         builder.Services.AddDbContextFactory<Contexto>(option => option.UseSqlite(ConnectionString));
-       //builder.Services.AddScoped<EntradasGuacalesService>();
-        //builder.Services.AddScoped<TiposHuacalesService>();
+       builder.Services.AddScoped<EntradasHuacalesService>();
+        builder.Services.AddScoped<TiposHuacalesServices>();
 
         // Add services to the container.
 
