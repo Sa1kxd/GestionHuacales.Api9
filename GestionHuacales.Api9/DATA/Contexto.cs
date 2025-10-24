@@ -7,6 +7,7 @@ public class Contexto : DbContext
     public Contexto(DbContextOptions<Contexto> options) : base(options)
     {
     }
+
     public DbSet<EntradasHuacales> EntradasHuacales { get; set; }
     public DbSet<TiposHuacales> TiposHuacales { get; set; }
     public DbSet<EntradasHuacalesDetalle> EntradasHuacalesDetalle { get; set; }
